@@ -1,230 +1,124 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Nanda Teknik Banyuwangi</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary: #00AA5B; 
-            --bg: #F1F5F9;
-            --white: #ffffff;
-            --text-dark: #1E293B;
-            --text-grey: #64748B;
-            --border: #E2E8F0;
-        }
-
-        * { box-sizing: border-box; scroll-behavior: smooth; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text-dark); margin: 0;}
-
-        /* --- STICKY HEADER --- */
-        nav {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border);
-        }
-        .logo { font-weight: 800; font-size: 1.1rem; color: var(--primary); text-decoration: none; letter-spacing: -0.5px; }
-
-        .wrapper { max-width: 800px; margin: 20px auto; background: var(--white); border-radius: 28px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.02); }
-
-        /* --- APP STYLE PROFILE HEADER --- */
-        header.profile-section {
-            padding: 40px;
-            display: flex;
-            gap: 25px;
-            align-items: flex-start;
-            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
-            border-bottom: 1px solid var(--border);
-        }
-        .profile-img { width: 120px; height: 120px; border-radius: 28px; object-fit: cover; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .details h1 { font-size: 1.4rem; margin: 0; font-weight: 800; color: var(--text-dark); }
-        
-        .personal-data { display: grid; grid-template-columns: 1fr; gap: 8px; margin-top: 15px; }
-        .data-item { font-size: 0.85rem; color: var(--text-grey); display: flex; align-items: center; gap: 10px; }
-        .data-item i { color: var(--primary); width: 16px; text-align: center; }
-        .data-item b { color: var(--text-dark); font-weight: 600; }
-
-        /* --- APP CATEGORY MENU (4-COLUMN GRID) --- */
-        .app-menu-section { padding: 30px 40px; }
-        .section-title { font-size: 0.9rem; font-weight: 800; color: var(--text-dark); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
-        
-        .menu-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px 10px; text-align: center; }
-        .menu-item { text-decoration: none; color: var(--text-dark); transition: 0.3s; }
-        .icon-square { 
-            width: 60px; height: 60px; background: #F1F5F9; border-radius: 18px; 
-            display: flex; align-items: center; justify-content: center; 
-            margin: 0 auto 10px; font-size: 1.4rem; color: var(--text-dark);
-            transition: 0.3s; border: 1px solid transparent;
-        }
-        .menu-item span { font-size: 0.7rem; font-weight: 700; display: block; }
-        .menu-item:hover .icon-square { background: var(--primary); color: white; transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,170,91,0.2); }
-
-        /* --- WORK EXPERIENCE TIMELINE --- */
-        .exp-section { padding: 10px 40px 40px; }
-        .timeline { position: relative; padding-left: 20px; border-left: 2px solid var(--border); }
-        .timeline-item { position: relative; margin-bottom: 25px; }
-        .timeline-item::before { 
-            content: ''; position: absolute; left: -27px; top: 5px; 
-            width: 12px; height: 12px; background: var(--primary); 
-            border-radius: 50%; border: 3px solid var(--white); 
-        }
-        .exp-date { font-size: 0.75rem; font-weight: 800; color: var(--primary); display: block; }
-        .exp-title { font-size: 0.9rem; font-weight: 700; color: var(--text-dark); margin: 2px 0; }
-        .exp-desc { font-size: 0.8rem; color: var(--text-grey); line-height: 1.4; }
-
-        /* --- MAPS --- */
-        .map-box { height: 250px; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); margin-top: 10px; }
-
-        /* --- FOOTER --- */
-        footer { background: #1E293B; color: #94A3B8; padding: 50px 5% 30px; margin-top: 40px; }
-        .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr; gap: 40px; }
-        .footer-col h4 { color: white; font-size: 0.9rem; margin-bottom: 15px; }
-        .footer-col p, .footer-col a { font-size: 0.8rem; text-decoration: none; color: inherit; display: block; margin-bottom: 10px; }
-        .footer-col a:hover { color: var(--primary); }
-        .socials { display: flex; gap: 15px; margin-top: 15px; font-size: 1.1rem; }
-
-        /* --- MOBILE RESPONSIVE --- */
-        @media (max-width: 650px) {
-            header.profile-section { flex-direction: column; align-items: center; text-align: center; padding: 30px 20px; }
-            .menu-grid { grid-template-columns: repeat(4, 1fr); }
-            .footer-grid { grid-template-columns: 1fr; }
-            .app-menu-section, .exp-section { padding: 25px 20px; }
-        }
-    </style>
+    <div id="meta-placeholder"></div>
 </head>
 <body>
+    <header id="main-header"></header>
 
-    <nav>
-        <a href="#" class="logo">NANDA TEKNIK</a>
-        <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-grey);">PORTFOLIO 2026</div>
-    </nav>
-
-    <div class="wrapper">
-        <header class="profile-section">
-            <img src="assets/img/profile.jfif" alt="Profile" class="profile-img">
-            <div class="details">
-                <h1>Nanda Krisbianto, A.Md.Kom</h1>
-                <div class="personal-data">
-                    <div class="data-item"><i class="fa-solid fa-cake-candles"></i> <b>Banyuwangi, 25 September 1998</b></div>
-                    <div class="data-item"><i class="fa-solid fa-location-dot"></i> <b>Sukowidi Indah Residence D05, Kalipuro</b></div>
-                    <div class="data-item"><i class="fa-solid fa-graduation-cap"></i> <b>D3 MI - Stikom Banyuwangi</b></div>
-                    <div class="data-item"><i class="fa-solid fa-briefcase"></i> <b>MEP, Software & Network Expert</b></div>
+    <main>
+        <section class="container py-5 mt-4">
+            <div class="row align-items-center bg-white p-4 p-md-5 rounded-4 shadow-sm">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="assets/img/profile.jfif" class="profile-img shadow" alt="Nanda Krisbianto">
                 </div>
-            </div>
-        </header>
-
-        <section class="app-menu-section">
-            <div class="section-title">Kategori Keahlian</div>
-            <div class="menu-grid">
-                <a href="/ac" class="menu-item">
-                    <div class="icon-square"><i class="fa-solid fa-snowflake"></i></div>
-                    <span>AC</span>
-                </a>
-                <a href="/cctv" class="menu-item">
-                    <div class="icon-square"><i class="fa-solid fa-video"></i></div>
-                    <span>CCTV</span>
-                </a>
-                <a href="/electrical" class="menu-item">
-                    <div class="icon-square"><i class="fa-solid fa-bolt"></i></div>
-                    <span>ELECTRIC</span>
-                </a>
-                <a href="/software" class="menu-item">
-                    <div class="icon-square"><i class="fa-solid fa-code"></i></div>
-                    <span>SOFTWARE</span>
-                </a>
-                <a href="/network" class="menu-item">
-                    <div class="icon-square"><i class="fa-solid fa-network-wired"></i></div>
-                    <span>NETWORK</span>
-                </a>
-                <a href="/mechanical" class="menu-item">
-                    <div class="icon-square"><i class="fa-solid fa-gears"></i></div>
-                    <span>MEKANIK</span>
-                </a>
-                <a href="/elektronik" class="menu-item">
-                    <div class="icon-square"><i class="fa-solid fa-microchip"></i></div>
-                    <span>ELEKTRONIK</span>
-                </a>
-                <a href="/contact" class="menu-item">
-                    <div class="icon-square" style="background: #FFF0E5;"><i class="fa-solid fa-envelope" style="color: #FF8A00;"></i></div>
-                    <span>KONTAK</span>
-                </a>
-            </div>
-        </section>
-
-        <section class="exp-section">
-            <div class="section-title">Riwayat Pekerjaan</div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span class="exp-date">2025 - SEKARANG</span>
-                    <p class="exp-title">Owner & Lead Technician</p>
-                    <p class="exp-desc">Nanda Teknik Banyuwangi - Fokus pada layanan maintenance AC, CCTV, Jaringan Server, dan pengembangan Software Kasir/CRM.</p>
-                </div>
-                <div class="timeline-item">
-                    <span class="exp-date">2024 - 2025</span>
-                    <p class="exp-title">DW Engineer</p>
-                    <p class="exp-desc">Kokoon Hotel Banyuwangi - Bertanggung jawab atas ketersediaan jaringan, sistem operasional hotel, dan perangkat IT.</p>
-                </div>
-                <div class="timeline-item">
-                    <span class="exp-date">2023 - 2024</span>
-                    <p class="exp-title">SPV EOS (based - Kominfo Banyuwangi)</p>
-                    <p class="exp-desc">Menangani instalasi jaringan server dan rack activation di beberapa sekolah (SMPN 3) dan kantor pemerintahan di Banyuwangi.</p>
+                <div class="col-md-8 px-lg-5">
+                    <span class="badge bg-primary mb-2 px-3 py-2 rounded-pill">Technical Specialist</span>
+                    <h1 class="fw-bold mb-1">Nanda Krisbianto</h1>
+                    <p class="text-muted mb-4">Founder of Mandiri Usaha Teknik</p>
+                    
+                    <div class="row gy-3">
+                        <div class="col-sm-6">
+                            <small class="text-secondary d-block">Tanggal Lahir</small>
+                            <span class="fw-semibold">25 September 1998</span>
+                        </div>
+                        <div class="col-sm-6">
+                            <small class="text-secondary d-block">Pendidikan Terakhir</small>
+                            <span class="fw-semibold">D3 Manajemen Informatika STIKOM Banyuwangi</span>
+                        </div>
+                        <div class="col-sm-12">
+                            <small class="text-secondary d-block">Alamat</small>
+                            <span class="fw-semibold">Sukowidi Indah Residence, Banyuwangi 68421</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="exp-section" style="padding-top: 0;">
-            <div class="section-title">Lokasi Workshop</div>
-            <div class="map-box">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.123456789!2d114.3789!3d-8.1723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTAnMjAuMiJTIDExNMKwMjInNDQuMCJF!5e0!3m2!1sid!2sid!4v123456789" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Nanda Teknik Banyuwangi</h4>
-                <p>Solusi integrasi teknologi dan mekanikal terbaik di Banyuwangi. Melayani instansi maupun perorangan.</p>
-                <div class="socials">
-                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
+        <section id="layanan" class="container py-5">
+            <h4 class="fw-bold text-center mb-4">Layanan Utama</h4>
+            <div class="row g-3">
+                <div class="col-4 col-md-2">
+                    <a href="jasa/cctv.html" class="service-card">
+                        <i class="fa-solid fa-camera-security"></i>
+                        <div class="small fw-bold">CCTV</div>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2">
+                    <a href="jasa/ac.html" class="service-card">
+                        <i class="fa-solid fa-snowflake"></i>
+                        <div class="small fw-bold">AC</div>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2">
+                    <a href="jasa/software.html" class="service-card">
+                        <i class="fa-solid fa-code"></i>
+                        <div class="small fw-bold">Software</div>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2">
+                    <a href="jasa/jaringan.html" class="service-card">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <div class="small fw-bold">Jaringan</div>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2">
+                    <a href="jasa/electrical.html" class="service-card">
+                        <i class="fa-solid fa-bolt"></i>
+                        <div class="small fw-bold">Electrical</div>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2">
+                    <a href="jasa/mechanical.html" class="service-card">
+                        <i class="fa-solid fa-gears"></i>
+                        <div class="small fw-bold">Mechanical</div>
+                    </a>
                 </div>
             </div>
-            <div class="footer-col">
-                <h4>Sitemap</h4>
-                <a href="#">Beranda</a>
-                <a href="#">Layanan Kami</a>
-                <a href="#">Tentang Kami</a>
-                <a href="#">Blog Teknik</a>
-            </div>
-            <div class="footer-col">
-                <h4>Hubungi Kami</h4>
-                <p><i class="fa-solid fa-phone"></i> +62 823-3120-1148</p>
-                <p><i class="fa-solid fa-envelope"></i> admin@nandateknik.com</p>
-                <p><i class="fa-solid fa-clock"></i> Sen - Sab: 08.00 - 17.00</p>
-            </div>
-        </div>
-        <div style="text-align: center; border-top: 1px solid #334155; margin-top: 30px; padding-top: 20px; font-size: 0.7rem;">
-            &copy; 2026 Nanda Teknik. Created with Professional Care.
-        </div>
-    </footer>
+        </section>
 
-    <a href="https://wa.me/6282331201148" 
-       style="position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 10px 25px rgba(37,211,102,0.3); z-index: 9999; text-decoration: none;">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+        <section class="container py-5">
+            <h4 class="fw-bold mb-4">Riwayat Pekerjaan</h4>
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+                    <div class="mb-4">
+                        <h6 class="fw-bold text-primary mb-1">Founder - Mandiri Usaha Teknik</h6>
+                        <small class="text-muted d-block mb-2">2018 - Sekarang</small>
+                        <p class="small">Mengelola layanan teknis untuk CCTV, Jaringan, dan Perbaikan Elektronik di wilayah Banyuwangi.</p>
+                    </div>
+                    <div class="mb-0">
+                        <h6 class="fw-bold text-primary mb-1">Teknisi Lead - Kokoon Hotel Banyuwangi</h6>
+                        <small class="text-muted d-block mb-2">2016 - 2018</small>
+                        <p class="small">Bertanggung jawab atas pemeliharaan infrastruktur IT dan sistem pendingin gedung.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section id="portofolio" class="container py-5">
+            <h4 class="fw-bold mb-4">Galeri Pekerjaan</h4>
+            <div class="row g-3">
+                <div class="col-md-4 col-6"><img src="https://via.placeholder.com/400x300" class="img-fluid rounded-3 shadow-sm" alt="Proyek 1"></div>
+                <div class="col-md-4 col-6"><img src="https://via.placeholder.com/400x300" class="img-fluid rounded-3 shadow-sm" alt="Proyek 2"></div>
+                <div class="col-md-4 col-6"><img src="https://via.placeholder.com/400x300" class="img-fluid rounded-3 shadow-sm" alt="Proyek 3"></div>
+            </div>
+        </section>
+
+        <section class="container py-5 border-top">
+            <div class="text-center">
+                <h6 class="text-uppercase text-muted small mb-4">Klien & Partner</h6>
+                <div class="d-flex flex-wrap justify-content-center gap-5 align-items-center">
+                    <img src="assets/img/pertamina.png" class="partner-logo" alt="sppbe pertamina banyuwangi">
+                    <img src="assets/img/pelindo.png" class="partner-logo" alt="pelindo banyuwangi">
+                    <img src="assets/img/pemda.png" class="partner-logo" alt="pemerintah daerah banyuwangi">
+                    <img src="assets/img/btpn.png" class="partner-logo" alt="btpn syariah">
+                    <img src="assets/img/bsi.png" class="partner-logo" alt="bank syariah indonesia">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer"></footer>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>

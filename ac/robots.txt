@@ -1,0 +1,22 @@
+# ==========================================
+# Robots.txt untuk Mandiri Usaha Teknik
+# ==========================================
+
+User-agent: *
+Allow: /
+
+# Jangan indeks folder aset internal agar tidak muncul di pencarian gambar/script
+Disallow: /assets/js/
+Disallow: /assets/css/
+Disallow: /private/
+Disallow: /temp/
+
+# Optimasi untuk bot pencari gambar agar tetap bisa ambil foto galeri AC
+User-agent: Googlebot-Image
+Allow: /assets/img/
+
+# Berikan jalan ke Sitemap agar Google cepat crawl
+Sitemap: https://mandiriusahateknik.com/sitemap.xml
+
+# Berikan jeda crawl agar server tidak berat (opsional)
+Crawl-delay: 10
