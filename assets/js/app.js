@@ -79,9 +79,9 @@ const App = {
                 <div class="row g-4">
                     <div class="col-md-4">
                         <h5 class="text-white fw-bold mb-3">Kontak & Alamat</h5>
-                        <p class="small"><i class="fa-solid fa-location-dot me-2"></i> Sukowidi Indah Residence, Banyuwangi 68421</p>
-                        <p class="small"><i class="fa-solid fa-phone me-2"></i> +62 812-xxxx-xxxx</p>
-                        <p class="small"><i class="fa-solid fa-envelope me-2"></i> nanda@mandiriusahateknik.com</p>
+                        <p class="small"><i class="fa-solid fa-location-dot me-2"></i>Banyuwangi, Jawa Timur, Indonesia. 68421</p>
+                        <p class="small"><i class="fa-solid fa-phone me-2"></i> +6282331201148</p>
+                        <p class="small"><i class="fa-solid fa-envelope me-2"></i> nandateknik02@gmail.com</p>
                     </div>
                     <div class="col-md-4">
                         <h5 class="text-white fw-bold mb-3">Layanan Jasa</h5>
