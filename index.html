@@ -1,124 +1,245 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <div id="meta-placeholder"></div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanda Krisbianto - Integrated Business Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; }
+    </style>
 </head>
-<body>
-    <header id="main-header"></header>
+<body class="bg-gray-50 text-gray-800">
 
-    <main>
-        <section class="container py-5 mt-4">
-            <div class="row align-items-center bg-white p-4 p-md-5 rounded-4 shadow-sm">
-                <div class="col-md-4 text-center mb-4 mb-md-0">
-                    <img src="assets/img/profile.jfif" class="profile-img shadow" alt="Nanda Krisbianto">
-                </div>
-                <div class="col-md-8 px-lg-5">
-                    <span class="badge bg-primary mb-2 px-3 py-2 rounded-pill">Technical Specialist</span>
-                    <h1 class="fw-bold mb-1">Nanda Krisbianto</h1>
-                    <p class="text-muted mb-4">Founder of Mandiri Usaha Teknik</p>
+    <header class="sticky top-0 z-50 bg-white shadow-md transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-700">NK <span class="text-gray-900 text-lg font-light">GROUP</span></div>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#" class="hover:text-blue-600">Beranda</a>
+                <a href="#about" class="hover:text-blue-600">Tentang</a>
+                <a href="#business" class="hover:text-blue-600">Bisnis</a>
+                <a href="#news" class="hover:text-blue-600">Berita</a>
+            </div>
+            <a href="https://wa.me/your-number" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">Hubungi Kami</a>
+        </nav>
+    </header>
+
+    <section class="hero-gradient h-[80vh] flex items-center">
+        <div class="container mx-auto px-6 text-center">
+            <span class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-semibold uppercase tracking-wider">Profesional & Terpercaya</span>
+            <h1 class="mt-6 text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+                Solusi Terpadu Untuk <br> <span class="text-blue-600 font-bold">Bisnis & Gaya Hidup Anda</span>
+            </h1>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Mulai dari infrastruktur IT, pariwisata Banyuwangi, hingga hantaran bunga dan camilan premium dalam satu layanan.</p>
+            <div class="mt-10">
+                <a href="#business" class="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition mr-4">Lihat Layanan</a>
+                <a href="#about" class="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition">Siapa Saya?</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white overflow-hidden">
+    <div class="container mx-auto px-6 relative">
+        
+        <div class="absolute -top-10 -left-10 w-40 h-40 bg-blue-50 rounded-full blur-3xl opacity-50 z-0"></div>
+        <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-30 z-0"></div>
+
+        <div class="flex flex-col md:flex-row items-center gap-16 relative z-10">
+            
+            <div class="md:w-5/12 group relative">
+                <div class="absolute -bottom-6 -right-6 w-full h-full border-4 border-blue-100 rounded-2xl group-hover:border-blue-600 transition-colors duration-500 z-0"></div>
+                
+                <div class="relative overflow-hidden rounded-2xl shadow-2xl z-10 aspect-[4/5]">
+                    <img src="assets/img/profile.jfif" alt="Nanda Krisbianto" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-in-out">
                     
-                    <div class="row gy-3">
-                        <div class="col-sm-6">
-                            <small class="text-secondary d-block">Tanggal Lahir</small>
-                            <span class="fw-semibold">25 September 1998</span>
-                        </div>
-                        <div class="col-sm-6">
-                            <small class="text-secondary d-block">Pendidikan Terakhir</small>
-                            <span class="fw-semibold">D3 Manajemen Informatika STIKOM Banyuwangi</span>
-                        </div>
-                        <div class="col-sm-12">
-                            <small class="text-secondary d-block">Alamat</small>
-                            <span class="fw-semibold">Sukowidi Indah Residence, Banyuwangi 68421</span>
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                        <div class="text-white">
+                            <p class="text-xs uppercase tracking-widest opacity-80 mb-1">NK Group</p>
+                            <h4 class="font-bold text-lg">Nanda Krisbianto</h4>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="layanan" class="container py-5">
-            <h4 class="fw-bold text-center mb-4">Layanan Utama</h4>
-            <div class="row g-3">
-                <div class="col-4 col-md-2">
-                    <a href="cctv/banyuwangi/" class="service-card">
-                        <i class="fa-solid fa-camera"></i>
-                        <div class="small fw-bold">CCTV</div>
-                    </a>
+            <div class="md:w-7/12">
+                <span class="inline-block bg-blue-50 text-blue-700 text-xs px-4 py-1.5 rounded-full font-semibold uppercase tracking-wider mb-4 border border-blue-100">
+                    Mengenal Lebih Dekat
+                </span>
+                
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-950 mb-8 leading-tight">
+                    Inovasi, Integritas, & <span class="text-blue-600">Solusi Tanpa Batas.</span>
+                </h2>
+                
+                <div class="space-y-6 text-gray-700 text-lg leading-relaxed">
+                    <p>
+                        Sebagai seorang <span class="font-semibold text-gray-900">technopreneur</span> yang berbasis di Banyuwangi, saya berdedikasi tinggi untuk menghadirkan layanan berkualitas di berbagai sektor. Keahlian saya mencakup integrasi sistem teknologi hingga manajemen bisnis kreatif.
+                    </p>
+                    <p class="border-l-4 border-blue-200 pl-6 italic bg-gray-50 py-4 rounded-r-lg shadow-inner">
+                        "Fokus utama saya adalah membantu Anda mendapatkan solusi yang efektif, estetis, dan profesional, baik itu untuk infrastruktur kantor maupun kebutuhan momen spesial Anda."
+                    </p>
                 </div>
-                <div class="col-4 col-md-2">
-                    <a href="ac/" class="service-card">
-                        <i class="fa-solid fa-snowflake"></i>
-                        <div class="small fw-bold">AC</div>
-                    </a>
-                </div>
-                <div class="col-4 col-md-2">
-                    <a href="jasa/software.html" class="service-card">
-                        <i class="fa-solid fa-code"></i>
-                        <div class="small fw-bold">Software</div>
-                    </a>
-                </div>
-                <div class="col-4 col-md-2">
-                    <a href="jasa/jaringan.html" class="service-card">
-                        <i class="fa-solid fa-network-wired"></i>
-                        <div class="small fw-bold">Jaringan</div>
-                    </a>
-                </div>
-                <div class="col-4 col-md-2">
-                    <a href="jasa/electrical.html" class="service-card">
-                        <i class="fa-solid fa-bolt"></i>
-                        <div class="small fw-bold">Electrical</div>
-                    </a>
-                </div>
-                <div class="col-4 col-md-2">
-                    <a href="jasa/mechanical.html" class="service-card">
-                        <i class="fa-solid fa-gears"></i>
-                        <div class="small fw-bold">Mechanical</div>
-                    </a>
-                </div>
-            </div>
-        </section>
 
-        <section class="container py-5">
-            <h4 class="fw-bold mb-4">Riwayat Pekerjaan</h4>
-            <div class="card border-0 shadow-sm rounded-4">
-                <div class="card-body p-4">
-                    <div class="mb-4">
-                        <h6 class="fw-bold text-primary mb-1">Founder - Mandiri Usaha Teknik</h6>
-                        <small class="text-muted d-block mb-2">2018 - Sekarang</small>
-                        <p class="small">Mengelola layanan teknis untuk CCTV, Jaringan, dan Perbaikan Elektronik di wilayah Banyuwangi.</p>
+                <div class="mt-12 grid grid-cols-2 gap-6 pt-8 border-t border-gray-100">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-blue-100 text-blue-700 w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+                            <i class="fas fa-certificate text-xl"></i>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-gray-950">Berorientasi Kualitas</h5>
+                            <p class="text-sm text-gray-500">Standar profesional di setiap detail.</p>
+                        </div>
                     </div>
-                    <div class="mb-0">
-                        <h6 class="fw-bold text-primary mb-1">Teknisi Lead - Kokoon Hotel Banyuwangi</h6>
-                        <small class="text-muted d-block mb-2">2016 - 2018</small>
-                        <p class="small">Bertanggung jawab atas pemeliharaan infrastruktur IT dan sistem pendingin gedung.</p>
+                    <div class="flex items-center gap-4">
+                        <div class="bg-blue-100 text-blue-700 w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+                            <i class="fas fa-handshake text-xl"></i>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-gray-950">Kemitraan Terpercaya</h5>
+                            <p class="text-sm text-gray-500">Membangun hubungan jangka panjang.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="portofolio" class="container py-5">
-            <h4 class="fw-bold mb-4">Galeri Pekerjaan</h4>
-            <div class="row g-3">
-                <div class="col-md-4 col-6"><img src="https://via.placeholder.com/400x300" class="img-fluid rounded-3 shadow-sm" alt="Proyek 1"></div>
-                <div class="col-md-4 col-6"><img src="https://via.placeholder.com/400x300" class="img-fluid rounded-3 shadow-sm" alt="Proyek 2"></div>
-                <div class="col-md-4 col-6"><img src="https://via.placeholder.com/400x300" class="img-fluid rounded-3 shadow-sm" alt="Proyek 3"></div>
-            </div>
-        </section>
-
-        <section class="container py-5 border-top">
-            <div class="text-center">
-                <h6 class="text-uppercase text-muted small mb-4">Klien & Partner</h6>
-                <div class="d-flex flex-wrap justify-content-center gap-5 align-items-center">
-                    <img src="assets/img/pertamina.png" class="partner-logo" alt="sppbe pertamina banyuwangi">
-                    <img src="assets/img/pelindo.png" class="partner-logo" alt="pelindo banyuwangi">
-                    <img src="assets/img/pemda.png" class="partner-logo" alt="pemerintah daerah banyuwangi">
-                    <img src="assets/img/btpn.png" class="partner-logo" alt="btpn syariah">
-                    <img src="assets/img/bsi.png" class="partner-logo" alt="bank syariah indonesia">
+                <div class="mt-14">
+                    <a href="#business" class="inline-flex items-center gap-2.5 bg-gray-900 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+                        Lihat Unit Bisnis Kami <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
                 </div>
             </div>
-        </section>
-    </main>
 
-    <footer id="main-footer"></footer>
-    <script src="assets/js/app.js"></script>
+        </div>
+    </div>
+</section>
+
+    <section id="business" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-12">Unit Bisnis Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition border-t-4 border-blue-600">
+                    <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-tools"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Jasa Teknis</h3>
+                    <p class="text-gray-500">CCTV, Jaringan (MikroTik/Ruijie), Server, dan Maintenance AC.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition border-t-4 border-blue-400">
+                    <div class="text-blue-400 text-4xl mb-4"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Pariwisata</h3>
+                    <p class="text-gray-500">Paket Wisata Banyuwangi, Sewa Mobil, dan Perjalanan Lokal.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition border-t-4 border-pink-400">
+                    <div class="text-pink-400 text-4xl mb-4"><i class="fas fa-award"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Florist</h3>
+                    <p class="text-gray-500">Papan Bunga, Buket Premium, dan Dekorasi Acara.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition border-t-4 border-orange-400">
+                    <div class="text-orange-400 text-4xl mb-4"><i class="fas fa-cookie-bite"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Snack & Camilan</h3>
+                    <p class="text-gray-500">Produk camilan khas dengan kemasan modern dan rasa otentik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-between items-end mb-12">
+            <h2 class="text-3xl font-bold text-gray-900">Update & Berita Terbaru</h2>
+            <a href="https://www.nandateknik.com/" target="_blank" class="text-blue-600 font-semibold hover:underline">Lihat Semua Artikel</a>
+        </div>
+        
+        <div id="news-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="animate-pulse bg-gray-100 h-64 rounded-xl"></div>
+            <div class="animate-pulse bg-gray-100 h-64 rounded-xl"></div>
+            <div class="animate-pulse bg-gray-100 h-64 rounded-xl"></div>
+        </div>
+    </div>
+
+    <script>
+        function panggilBerita(json) {
+            const container = document.getElementById('news-container');
+            let html = '';
+            const entries = json.feed.entry;
+
+            if (entries) {
+                entries.forEach(entry => {
+                    const judul = entry.title.$t;
+                    const link = entry.link.find(l => l.rel === 'alternate').href;
+                    
+                    // Mengambil Ringkasan
+                    let isi = entry.summary ? entry.summary.$t : (entry.content ? entry.content.$t : "");
+                    let ringkasan = isi.replace(/<[^>]*>?/gm, '').substring(0, 100) + "...";
+
+                    // Mengambil Gambar (mengubah resolusi thumbnail ke ukuran besar)
+                    let imgUrl = entry.media$thumbnail 
+                        ? entry.media$thumbnail.url.replace('s72-c', 's1600') 
+                        : 'https://via.placeholder.com/400x250?text=Nanda+Teknik';
+
+                    html += `
+                        <div class="rounded-xl overflow-hidden shadow-lg group border border-gray-100 hover:border-blue-200 transition bg-white flex flex-col">
+                            <div class="relative overflow-hidden h-52">
+                                <img src="${imgUrl}" alt="${judul}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <div class="absolute top-4 left-4 bg-blue-600 text-white text-[10px] uppercase tracking-widest px-3 py-1 rounded-full font-bold">
+                                    Terbaru
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col">
+                                <h4 class="font-bold text-xl mb-3 group-hover:text-blue-600 transition duration-300">
+                                    <a href="${link}" target="_blank">${judul}</a>
+                                </h4>
+                                <p class="text-gray-500 text-sm mb-4 line-clamp-3">${ringkasan}</p>
+                                <div class="mt-auto">
+                                    <a href="${link}" target="_blank" class="text-blue-600 text-xs font-bold flex items-center hover:gap-2 transition-all">
+                                        BACA SELENGKAPNYA <i class="fas fa-arrow-right ml-2 text-[10px]"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                container.innerHTML = html;
+            } else {
+                container.innerHTML = '<p class="text-center col-span-full text-gray-400">Gagal memuat berita.</p>';
+            }
+        }
+    </script>
+    <script src="https://www.nandateknik.com/feeds/posts/default?alt=json-in-script&callback=panggilBerita&max-results=3"></script>
+</section>
+
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-gray-800 pb-12">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Kontak Kami</h3>
+                <p class="text-gray-400 mb-4">
+                    Sukowidi Indah Residence, Banyuwangi<br>
+                    Jawa Timur, Indonesia
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-blue-500 text-xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-blue-500 text-xl"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="hover:text-blue-500 text-xl"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Link Cepat</h3>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="#" class="hover:text-white">Layanan Jasa Teknis</a></li>
+                    <li><a href="#" class="hover:text-white">Paket Wisata</a></li>
+                    <li><a href="#" class="hover:text-white">Pesan Karangan Bunga</a></li>
+                    <li><a href="#" class="hover:text-white">Katalog Camilan</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Lokasi Kami</h3>
+                <div class="rounded-lg overflow-hidden h-40 bg-gray-700">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.868019333902!2d114.3725!3d-8.196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTEnNDUuNiJTIDExNMKwMjInMjEuMCJF!5e0!3m2!1sid!2sid!4v1640000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="text-center pt-8 text-gray-500 text-sm">
+            &copy; 2026 Nanda Krisbianto. All Rights Reserved.
+        </div>
+    </footer>
+
 </body>
 </html>

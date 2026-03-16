@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan Teknis - NK Enterprises</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .tech-card:hover .icon-box { transform: scale(1.1) rotate(-5deg); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-700">NK <span class="text-gray-900 text-lg font-light">Technical</span></div>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="hover:text-blue-600 transition">Beranda</a>
+                <a href="#software" class="hover:text-blue-600 transition">Software</a>
+                <a href="#network" class="hover:text-blue-600 transition">Network</a>
+                <a href="#electrical" class="hover:text-blue-600 transition">Electrical</a>
+            </div>
+            <a href="https://wa.me/your-number" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 shadow-lg transition">Minta Penawaran</a>
+        </nav>
+    </header>
+
+    <section class="relative bg-blue-900 py-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/></pattern></defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 uppercase tracking-tighter">Engineering Services</h1>
+            <p class="text-blue-200 text-lg max-w-2xl mx-auto">Solusi rekayasa terpadu untuk otomasi, konektivitas, dan infrastruktur energi yang handal.</p>
+        </div>
+    </section>
+
+    <section id="software" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <span class="text-blue-600 font-bold uppercase tracking-widest text-sm">Automate & Scale</span>
+                    <h2 class="text-3xl font-extrabold mt-2 mb-6">Software & Business Automation</h2>
+                    <ul class="space-y-4">
+                        <li class="flex gap-4 p-4 rounded-xl bg-gray-50 border-l-4 border-blue-600">
+                            <i class="fas fa-robot text-blue-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold">Google Apps Script Development</h4>
+                                <p class="text-sm text-gray-500">Otomasi Google Sheets, Docs, dan sistem pelaporan otomatis untuk CRM.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 p-4 rounded-xl bg-gray-50 border-l-4 border-blue-600">
+                            <i class="fas fa-database text-blue-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold">Custom Management System</h4>
+                                <p class="text-sm text-gray-500">Pembuatan sistem kasir (POS), invoice generator, dan database internal.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-900 p-6 rounded-2xl shadow-2xl overflow-hidden font-mono text-xs text-blue-400">
+                        <p>// Script Automation v2.1</p>
+                        <p class="text-white">function automateBusinessWorkflow() {</p>
+                        <p class="ml-4">const data = SpreadsheetApp.getActive();</p>
+                        <p class="ml-4">const report = generateMonthlyReport(data);</p>
+                        <p class="ml-4 text-green-400">return "Efficiency Increased 100%";</p>
+                        <p class="text-white">}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="network" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold uppercase tracking-tight">Network & Connectivity</h2>
+                <div class="h-1 w-20 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm tech-card border border-gray-100">
+                    <div class="icon-box w-14 h-14 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Enterprise Networking</h3>
+                    <p class="text-gray-500 text-sm mb-4">Instalasi & konfigurasi MikroTik/Ruijie untuk pembagian bandwidth, VLAN, dan Hotspot management.</p>
+                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">VLAN Tagging</span>
+                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">Firewall</span>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm tech-card border border-gray-100">
+                    <div class="icon-box w-14 h-14 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">IP Camera System</h3>
+                    <p class="text-gray-500 text-sm mb-4">Pemasangan sistem keamanan IP Camera dengan integrasi akses mobile (Hikvision/Dahua/Hilook).</p>
+                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">Online Monitoring</span>
+                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">Storage Setup</span>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm tech-card border border-gray-100">
+                    <div class="icon-box w-14 h-14 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Infrastructure Setup</h3>
+                    <p class="text-gray-500 text-sm mb-4">Aktivasi rak server, penambahan titik jaringan kantor, dan penataan kabel (Cable Management).</p>
+                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">Rack Activation</span>
+                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">Cat6/Fiber</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="electrical" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                <div class="md:w-1/2">
+                    <span class="text-blue-600 font-bold uppercase tracking-widest text-sm">Power & Cooling</span>
+                    <h2 class="text-3xl font-extrabold mt-2 mb-6">Electrical & HVAC Systems</h2>
+                    <p class="text-gray-600 mb-8 italic">"Menjamin stabilitas daya dan suhu operasional perangkat Anda."</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 bg-gray-50 p-4 rounded-lg">
+                            <i class="fas fa-snowflake text-blue-500"></i>
+                            <span class="font-bold text-gray-700">Maintenance AC Split & Central (Cuci, Freon, Perbaikan)</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-gray-50 p-4 rounded-lg">
+                            <i class="fas fa-bolt text-yellow-500"></i>
+                            <span class="font-bold text-gray-700">Instalasi Listrik Arus Lemah & Panel Sederhana</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1558389186-438424b00a32?auto=format&fit=crop&q=80" class="rounded-2xl shadow-lg mt-8" alt="AC Service">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80" class="rounded-2xl shadow-lg" alt="Electrical Work">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-white text-3xl font-bold mb-4">Butuh Solusi Teknis untuk Bisnis Anda?</h2>
+            <p class="text-gray-400 mb-10">Konsultasikan kebutuhan infrastruktur IT dan kelistrikan Anda sekarang juga.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="https://wa.me/your-number" class="bg-blue-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-700 shadow-xl transition flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp"></i> Hubungi WhatsApp
+                </a>
+                <a href="index.html" class="border border-gray-700 text-gray-400 px-10 py-4 rounded-xl font-bold hover:bg-gray-800 transition">
+                    Kembali ke Beranda
+                </a>
+            </div>
+            <div class="mt-20 border-t border-gray-800 pt-8 text-gray-600 text-xs uppercase tracking-widest">
+                © 2026 NK Technical Enterprises - Banyuwangi Specialist
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

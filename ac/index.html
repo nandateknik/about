@@ -3,198 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mandiri Usaha Teknik | Jasa Servis AC Profesional Banyuwangi</title>
-    
+    <title>Pusat Layanan AC Banyuwangi - Nanda Teknik</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
-        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)); }
-        .card-hover:hover { transform: translateY(-10px); transition: all 0.3s ease; }
-        .slide { transition: opacity 1s ease-in-out; }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .nav-card:hover { border-color: #2563eb; background-color: #f8fafc; transform: translateY(-3px); transition: all 0.3s ease; }
+        .faq-item:hover { border-color: #2563eb; }
     </style>
-
-    <script src="assets/js/seo.js"></script>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-white text-gray-900">
 
-    <div id="main-header"></div>
+    <header id="main-header" class="bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-[0_4px_20px_-5px_rgba(0,0,0,0.1)] border-b border-gray-100"></header>
 
-    <section id="home" class="relative h-[500px] md:h-[600px] overflow-hidden bg-gray-900">
-        <div id="slider" class="h-full w-full">
-            <div class="slide absolute inset-0 opacity-100">
-                <div class="absolute inset-0 hero-gradient"></div>
-                <img src="https://images.unsplash.com/photo-1590756254933-2873d72a83b6?auto=format&fit=crop&w=1350&q=80" class="w-full h-full object-cover">
-                <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
-                    <h2 class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-up">Solusi AC Dingin & Sehat</h2>
-                    <p class="text-lg md:text-xl mb-8 max-w-2xl" data-aos="fade-up" data-aos-delay="200">Layanan perawatan AC terbaik untuk rumah dan kantor di wilayah Banyuwangi.</p>
-                    <a href="https://wa.me/628123456789" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-bold transition transform hover:scale-105">
-                        <i class="fab fa-whatsapp mr-2"></i> Konsultasi Sekarang
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
+    <section class="pt-20 pb-12 bg-gradient-to-b from-blue-50 to-white">
         <div class="container mx-auto px-6 text-center">
-            <h3 class="text-3xl font-bold mb-12" data-aos="fade-down">Kenapa Pilih Kami?</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="p-8 border rounded-2xl card-hover" data-aos="zoom-in">
-                    <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-user-check"></i></div>
-                    <h4 class="text-xl font-bold mb-2">Teknisi Profesional</h4>
-                    <p class="text-gray-600">Ahli di bidangnya dan jujur dalam setiap diagnosa kerusakan.</p>
-                </div>
-                <div class="p-8 border rounded-2xl card-hover" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-shield-alt"></i></div>
-                    <h4 class="text-xl font-bold mb-2">Bergaransi</h4>
-                    <p class="text-gray-600">Jaminan garansi pasca servis untuk kepuasan pelanggan.</p>
-                </div>
-                <div class="p-8 border rounded-2xl card-hover" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-clock"></i></div>
-                    <h4 class="text-xl font-bold mb-2">Respon Cepat</h4>
-                    <p class="text-gray-600">Tim lapangan siap melayani panggilan Anda dengan sigap.</p>
-                </div>
-            </div>
+            <span class="bg-blue-100 text-blue-700 px-5 py-2 rounded-full text-[10px] font-extrabold uppercase tracking-[0.2em]">Spesialis AC Banyuwangi</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-[1.1] mt-8 mb-8">
+                Kesejukan Ruangan Anda <br> <span class="text-blue-600">Prioritas Kami.</span>
+            </h1>
+
+            <div id="menu-grid"></div> 
+            
         </div>
     </section>
 
-    <section id="about" class="py-20 bg-blue-50">
+    <section id="about" class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2" data-aos="fade-right">
-                    <img src="assets/img/about.png" alt="Tentang Kami" class="rounded-3xl shadow-2xl">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80" class="rounded-3xl shadow-2xl relative z-10" alt="About Nanda Teknik">
+                        <div class="absolute -bottom-6 -right-6 bg-blue-600 text-white p-8 rounded-3xl z-20 hidden md:block">
+                            <p class="text-4xl font-black">8+</p>
+                            <p class="text-xs uppercase font-bold tracking-widest">Tahun Pengalaman</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="md:w-1/2" data-aos="fade-left">
-                    <h3 class="text-blue-600 font-bold mb-2 uppercase">Tentang Kami</h3>
-                    <h2 class="text-4xl font-bold mb-6 text-blue-900">Mandiri Usaha Teknik</h2>
-                    <p class="text-gray-700 leading-relaxed mb-6">Dikenal sebagai Nanda Teknik, kami telah melayani ribuan pelanggan di Banyuwangi. Kami fokus pada kualitas pendinginan udara agar aktivitas Anda tetap nyaman.</p>
-                    <ul class="space-y-3">
-                        <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> Area Layanan Seluruh Banyuwangi</li>
-                        <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> Peralatan Lengkap & Modern</li>
-                        <li><i class="fas fa-check-circle text-blue-600 mr-2"></i> Harga Kompetitif</li>
-                    </ul>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-extrabold mb-6 uppercase tracking-tighter">Tentang <span class="text-blue-600">Nanda Teknik</span></h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-justify">
+                        Berawal dari komitmen untuk memberikan solusi teknis yang jujur di Banyuwangi, Nanda Teknik tumbuh menjadi mitra terpercaya dalam perawatan HVAC. Kami bukan sekadar tukang service; kami adalah tim engineer yang memahami sistem pendinginan Anda secara mendalam.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="border-l-4 border-blue-600 pl-4">
+                            <h4 class="font-bold text-gray-900">Visi</h4>
+                            <p class="text-sm text-gray-500">Menjadi pusat layanan teknis nomor 1 di Banyuwangi dengan standar kualitas tinggi.</p>
+                        </div>
+                        <div class="border-l-4 border-blue-600 pl-4">
+                            <h4 class="font-bold text-gray-900">Misi</h4>
+                            <p class="text-sm text-gray-500">Memberikan transparansi harga dan diagnosa akurat kepada setiap pelanggan.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-20 bg-white">
+    <section id="layanan" class="py-24 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h3 class="text-3xl font-bold">Layanan Kami</h3>
-                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+                <h2 class="text-3xl font-extrabold uppercase tracking-tighter">Layanan <span class="text-blue-600">Terbaik Kami</span></h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Solusi lengkap untuk segala jenis kebutuhan AC baik untuk rumah tinggal, kantor, hingga gedung komersial.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-gray-50 p-6 rounded-xl hover:bg-blue-600 hover:text-white transition group" data-aos="fade-up">
-                    <i class="fas fa-tint text-3xl text-blue-600 group-hover:text-white mb-4"></i>
-                    <h4 class="font-bold text-xl mb-2">Cuci AC</h4>
-                    <p class="text-sm opacity-80">Pembersihan unit indoor & outdoor.</p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-xl hover:bg-blue-600 hover:text-white transition group" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-tools text-3xl text-blue-600 group-hover:text-white mb-4"></i>
-                    <h4 class="font-bold text-xl mb-2">Perbaikan AC</h4>
-                    <p class="text-sm opacity-80">Menangani bocor, tidak dingin, atau mati.</p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-xl hover:bg-blue-600 hover:text-white transition group" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-sync text-3xl text-blue-600 group-hover:text-white mb-4"></i>
-                    <h4 class="font-bold text-xl mb-2">Bongkar Pasang</h4>
-                    <p class="text-sm opacity-80">Relokasi unit ke lokasi baru dengan aman.</p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-xl hover:bg-blue-600 hover:text-white transition group" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-gas-pump text-3xl text-blue-600 group-hover:text-white mb-4"></i>
-                    <h4 class="font-bold text-xl mb-2">Tambah Freon</h4>
-                    <p class="text-sm opacity-80">Pengisian gas sesuai spesifikasi unit.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="pricing" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <h3 class="text-3xl font-bold mb-12">Estimasi Harga Jasa</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl shadow-lg p-8 border-t-4 border-blue-600" data-aos="flip-left">
-                    <h4 class="text-xl font-bold mb-4">PAKET CUCI</h4>
-                    <div class="text-4xl font-bold text-blue-600 mb-6">Rp 75rb</div>
-                    <ul class="text-left space-y-4 mb-8">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Cuci Indoor & Outdoor</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Cek Freon</li>
-                    </ul>
-                    <a href="estimasi.html" class="block py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">Hitung Total</a>
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors"><i class="fas fa-snowflake"></i></div>
+                    <h3 class="font-bold text-xl mb-4">Service & Perbaikan</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Penanganan AC mati, tidak dingin, bocor air, berisik, hingga perbaikan modul/PCB elektronik.</p>
+                    <a href="servis-ac-banyuwangi.html" class="text-blue-600 font-bold text-xs uppercase tracking-widest hover:underline">Selengkapnya →</a>
                 </div>
-                <div class="bg-blue-600 text-white rounded-2xl shadow-2xl p-8 transform scale-105" data-aos="flip-left" data-aos-delay="100">
-                    <h4 class="text-xl font-bold mb-4">PAKET LENGKAP</h4>
-                    <div class="text-4xl font-bold mb-6">Rp 150rb</div>
-                    <ul class="text-left space-y-4 mb-8">
-                        <li><i class="fas fa-check text-white mr-2"></i> Cuci AC + Tambah Freon</li>
-                        <li><i class="fas fa-check text-white mr-2"></i> Cek Kelistrikan</li>
-                    </ul>
-                    <a href="https://wa.me/628123456789" class="block py-3 bg-white text-blue-600 rounded-lg font-bold shadow-lg">Pesan Sekarang</a>
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors"><i class="fas fa-wind"></i></div>
+                    <h3 class="font-bold text-xl mb-4">Cuci & Perawatan</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Pembersihan unit indoor-outdoor secara menyeluruh untuk udara lebih sehat dan efisiensi listrik.</p>
+                    <a href="cuci-ac-banyuwangi.html" class="text-blue-600 font-bold text-xs uppercase tracking-widest hover:underline">Selengkapnya →</a>
                 </div>
-                <div class="bg-white rounded-2xl shadow-lg p-8 border-t-4 border-blue-600" data-aos="flip-left" data-aos-delay="200">
-                    <h4 class="text-xl font-bold mb-4">PASANG AC</h4>
-                    <div class="text-4xl font-bold text-blue-600 mb-6">Rp 250rb</div>
-                    <ul class="text-left space-y-4 mb-8">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Jasa Instalasi & Vakum</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Tes Fungsi</li>
-                    </ul>
-                    <a href="estimasi.html" class="block py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">Estimasi Lain</a>
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors"><i class="fas fa-tools"></i></div>
+                    <h3 class="font-bold text-xl mb-4">Bongkar Pasang</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Jasa instalasi AC baru atau pemindahan unit dari lokasi lama ke lokasi baru dengan teknik vacuum standar.</p>
+                    <a href="pasang-ac-banyuwangi.html" class="text-blue-600 font-bold text-xs uppercase tracking-widest hover:underline">Selengkapnya →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="gallery" class="py-20 bg-white">
+    <section class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <h3 class="text-3xl font-bold text-center mb-12">Galeri Pekerjaan</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <img src="https://images.unsplash.com/photo-1621905252507-b354bcadcabc?auto=format&fit=crop&w=400&q=80" class="rounded-lg h-64 w-full object-cover shadow-md" data-aos="zoom-in">
-                <img src="https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?auto=format&fit=crop&w=400&q=80" class="rounded-lg h-64 w-full object-cover shadow-md" data-aos="zoom-in" data-aos-delay="100">
-                <img src="https://images.unsplash.com/photo-1585338665814-d543e2e50b9a?auto=format&fit=crop&w=400&q=80" class="rounded-lg h-64 w-full object-cover shadow-md" data-aos="zoom-in" data-aos-delay="200">
-                <img src="https://images.unsplash.com/photo-1590756254933-2873d72a83b6?auto=format&fit=crop&w=400&q=80" class="rounded-lg h-64 w-full object-cover shadow-md" data-aos="zoom-in" data-aos-delay="300">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/3">
+                    <h2 class="text-3xl font-extrabold uppercase tracking-tighter leading-tight mb-4">Area Layanan <br><span class="text-blue-600">Banyuwangi</span></h2>
+                    <p class="text-gray-500 text-sm">Teknisi kami siap meluncur ke lokasi Anda di seluruh wilayah kecamatan di Kabupaten Banyuwangi.</p>
+                    <div class="mt-8 p-4 bg-blue-50 rounded-2xl border-l-4 border-blue-600">
+                        <p class="text-xs font-bold text-blue-800 italic">"Pemesanan di area Banyuwangi Kota bebas biaya transportasi."</p>
+                    </div>
+                </div>
+                <div class="md:w-2/3 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="flex items-center gap-2 text-gray-600 text-sm"><i class="fas fa-map-marker-alt text-blue-400 text-[10px]"></i> Banyuwangi Kota</div>
+                    <div class="flex items-center gap-2 text-gray-600 text-sm"><i class="fas fa-map-marker-alt text-blue-400 text-[10px]"></i> Giri</div>
+                    <div class="flex items-center gap-2 text-gray-600 text-sm"><i class="fas fa-map-marker-alt text-blue-400 text-[10px]"></i> Glagah</div>
+                    <div class="flex items-center gap-2 text-gray-600 text-sm"><i class="fas fa-map-marker-alt text-blue-400 text-[10px]"></i> Kalipuro</div>
+                    <div class="flex items-center gap-2 text-gray-600 text-sm"><i class="fas fa-map-marker-alt text-blue-400 text-[10px]"></i> Licin</div>
+                    <div class="flex items-center gap-2 text-gray-600 text-sm"><i class="fas fa-map-marker-alt text-blue-400 text-[10px]"></i> Kabat</div>
+                    <div class="flex items-center gap-2 text-gray-600 text-sm"><i class="fas fa-map-marker-alt text-blue-400 text-[10px]"></i> Rogojampi</div>
+                    <div class="flex items-center gap-2 text-gray-600 text-sm"><i class="fas fa-map-marker-alt text-blue-400 text-[10px]"></i> Blimbingsari</div>
+                    <div class="flex items-center gap-2 text-gray-600 text-sm"><i class="fas fa-map-marker-alt text-blue-400 text-[10px]"></i> Singojuruh</div>
+                    <div class="flex items-center gap-2 text-gray-600 text-sm"><i class="fas fa-map-marker-alt text-blue-400 text-[10px]"></i> Srono</div>
+                    <div class="flex items-center gap-2 text-gray-600 text-sm"><i class="fas fa-map-marker-alt text-blue-400 text-[10px]"></i> Muncar</div>
+                    <div class="flex items-center gap-2 text-gray-600 text-sm"><i class="fas fa-map-marker-alt text-blue-400 text-[10px]"></i> Cluring</div>
+                    <div class="flex items-center gap-2 text-gray-600 text-sm"><i class="fas fa-map-marker-alt text-blue-400 text-[10px]"></i> Gambiran</div>
+                    <div class="flex items-center gap-2 text-gray-600 text-sm"><i class="fas fa-map-marker-alt text-blue-400 text-[10px]"></i> Genteng</div>
+                    <div class="flex items-center gap-2 text-gray-600 text-sm"><i class="fas fa-map-marker-alt text-blue-400 text-[10px]"></i> Glenmore</div>
+                    <div class="flex items-center gap-2 text-gray-600 text-sm"><i class="fas fa-map-marker-alt text-blue-400 text-[10px]"></i> Kalibaru</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-blue-900 text-white">
+    <section class="py-24 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold uppercase tracking-widest mb-4">Kenapa Harus Kami?</h2>
+                <div class="h-1 w-20 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center p-6 border border-gray-800 rounded-3xl hover:bg-gray-800 transition">
+                    <i class="fas fa-shield-check text-blue-500 text-3xl mb-6"></i>
+                    <h4 class="font-bold mb-3">Garansi Resmi</h4>
+                    <p class="text-gray-400 text-sm italic">"Jaminan pengerjaan ulang gratis jika kendala muncul kembali."</p>
+                </div>
+                <div class="text-center p-6 border border-gray-800 rounded-3xl hover:bg-gray-800 transition">
+                    <i class="fas fa-user-tie text-blue-500 text-3xl mb-6"></i>
+                    <h4 class="font-bold mb-3">Teknisi Jujur</h4>
+                    <p class="text-gray-400 text-sm italic">"Diagnosa transparan, kami tidak mengada-ada kerusakan."</p>
+                </div>
+                <div class="text-center p-6 border border-gray-800 rounded-3xl hover:bg-gray-800 transition">
+                    <i class="fas fa-clock text-blue-500 text-3xl mb-6"></i>
+                    <h4 class="font-bold mb-3">Fast Response</h4>
+                    <p class="text-gray-400 text-sm italic">"Layanan cepat tanggap untuk area Banyuwangi Kota."</p>
+                </div>
+                <div class="text-center p-6 border border-gray-800 rounded-3xl hover:bg-gray-800 transition">
+                    <i class="fas fa-broom text-blue-500 text-3xl mb-6"></i>
+                    <h4 class="font-bold mb-3">Kerja Rapi</h4>
+                    <p class="text-gray-400 text-sm italic">"Area kerja kami pastikan tetap bersih setelah pengerjaan."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-black uppercase tracking-[0.3em] text-[10px]">Testimoni</span>
+                <h2 class="text-4xl font-black uppercase tracking-tighter mt-4 leading-tight">Apa Kata <br> <span class="text-blue-600">Pelanggan Kami?</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-[2.5rem] border border-transparent hover:border-blue-100 hover:bg-white hover:shadow-xl transition-all duration-300">
+                    <div class="flex text-yellow-400 mb-4 text-xs">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-8 italic">"Sangat puas dengan servis AC dari Nanda Teknik. Teknisi datang tepat waktu, pengerjaan rapi banget, dan yang paling penting harganya jujur sesuai estimasi di website."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">A</div>
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-widest">Agus Setiawan</h4>
+                            <p class="text-[10px] text-gray-400 uppercase font-medium">Banyuwangi Kota</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-[2.5rem] border border-transparent hover:border-blue-100 hover:bg-white hover:shadow-xl transition-all duration-300">
+                    <div class="flex text-yellow-400 mb-4 text-xs">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-8 italic">"Recomended banget buat kantor-kantor di Banyuwangi. Kami langganan maintenance rutin di sini, AC selalu dingin dan nggak pernah rewel lagi. Fast respon!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold text-xl"><i class="fas fa-building text-sm"></i></div>
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-widest">Manajemen Kantor</h4>
+                            <p class="text-[10px] text-gray-400 uppercase font-medium">Area Rogojampi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-[2.5rem] border border-transparent hover:border-blue-100 hover:bg-white hover:shadow-xl transition-all duration-300">
+                    <div class="flex text-yellow-400 mb-4 text-xs">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-8 italic">"Awalnya ragu nyari tukang AC online, pas nyoba Nanda Teknik ternyata profesional banget. Ada garansinya juga, jadi merasa aman kalau ada apa-apa."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">R</div>
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-widest">Rina Wijaya</h4>
+                            <p class="text-[10px] text-gray-400 uppercase font-medium">Perumahan Giri</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600 hover:text-blue-800 flex items-center justify-center gap-2">
+                    <i class="fab fa-google"></i> Lihat 50+ Ulasan Lainnya di Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-24 bg-gray-50">
         <div class="container mx-auto px-6 max-w-4xl">
-            <h3 class="text-3xl font-bold text-center mb-12">Pertanyaan Populer</h3>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold uppercase tracking-tighter">Pertanyaan Populer (FAQ)</h2>
+                <p class="text-gray-500 mt-4">Beberapa hal yang sering ditanyakan oleh pelanggan kami.</p>
+            </div>
             <div class="space-y-4">
-                <details class="bg-blue-800 p-4 rounded-lg cursor-pointer">
-                    <summary class="font-bold">Berapa lama waktu cuci AC?</summary>
-                    <p class="mt-2 text-blue-200 italic">Sekitar 45-60 menit tergantung kondisi unit.</p>
-                </details>
-                <details class="bg-blue-800 p-4 rounded-lg cursor-pointer">
-                    <summary class="font-bold">Ada garansi setelah servis?</summary>
-                    <p class="mt-2 text-blue-200 italic">Ya, kami berikan garansi 30 hari.</p>
-                </details>
+                <div class="faq-item bg-white p-6 rounded-2xl border border-gray-100 shadow-sm transition">
+                    <h4 class="font-bold text-gray-900">Berapa lama garansi yang diberikan?</h4>
+                    <p class="text-gray-500 text-sm mt-2">Kami memberikan garansi pengerjaan selama 30 hari untuk cuci AC dan servis standar.</p>
+                </div>
+                <div class="faq-item bg-white p-6 rounded-2xl border border-gray-100 shadow-sm transition">
+                    <h4 class="font-bold text-gray-900">Kapan waktu ideal untuk cuci AC?</h4>
+                    <p class="text-gray-500 text-sm mt-2">Idealnya setiap 3-4 bulan sekali untuk menjaga efisiensi listrik dan kebersihan udara ruangan.</p>
+                </div>
+                <div class="faq-item bg-white p-6 rounded-2xl border border-gray-100 shadow-sm transition">
+                    <h4 class="font-bold text-gray-900">Apakah ada tambahan biaya transportasi?</h4>
+                    <p class="text-gray-500 text-sm mt-2">Untuk wilayah Banyuwangi Kota gratis transport. Wilayah luar kota dikenakan biaya sesuai jarak.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <div id="main-footer"></div>
-
-    <a href="https://wa.me/628123456789" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-[100] hover:scale-110 transition">
-        <i class="fab fa-whatsapp text-3xl"></i>
-    </a>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/app.js"></script>
-    <script>
-        AOS.init({ duration: 800, once: true });
-        
-        // Slider sederhana
-        let current = 0;
-        const slides = document.querySelectorAll('.slide');
-        setInterval(() => {
-            slides[current].style.opacity = 0;
-            current = (current + 1) % slides.length;
-            slides[current].style.opacity = 1;
-        }, 5000);
-    </script>
+    <footer id="main-footer" class="bg-gray-900 text-white pt-16 pb-8 mt-20"></footer>
+    <script src="assets/js/loader.js"></script>
 </body>
 </html>

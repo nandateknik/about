@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimasi Biaya Jasa AC - Nanda Teknik</title>
+    
+    <meta name="description" content="Hitung estimasi biaya servis AC Anda secara transparan. Free ongkir < 8km dari Sukowidi, Banyuwangi.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .service-card.active { border-color: #2563eb; background-color: #eff6ff; box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1); }
+        #map { height: 300px; border-radius: 1.5rem; margin-top: 1rem; z-index: 10; width: 100%; border: 2px solid #f3f4f6; }
+        .custom-div-icon i { filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <header id="main-header" class="bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-gray-100"></header>
+
+    
+    <section class="pt-20 pb-12 bg-gradient-to-b from-blue-50 to-white">
+        <div class="container mx-auto px-6 text-center">
+            <span class="bg-blue-100 text-blue-700 px-5 py-2 rounded-full text-[10px] font-extrabold uppercase tracking-[0.2em]">Spesialis AC Banyuwangi</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-[1.1] mt-8 mb-8">
+                ESTIMASI LAYANAN AC <br> <span class="text-blue-600">di Banyuwangi.</span>
+            </h1>
+
+            <div id="menu-grid"></div> 
+            
+        </div>
+    </section>
+
+    <main class="py-12 container mx-auto px-6 max-w-5xl">
+        <div class="mb-10 text-center">
+            <h1 class="text-3xl md:text-4xl font-black uppercase tracking-tighter">Kalkulator <span class="text-blue-600">Jasa & Jarak</span></h1>
+            <p class="text-gray-500 mt-2 text-sm font-medium uppercase tracking-widest italic">Transparansi harga untuk kenyamanan Anda</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <div class="lg:col-span-2 space-y-6">
+                
+                <div class="bg-white p-6 md:p-8 rounded-[2.5rem] shadow-sm border border-gray-100">
+                    <h2 class="text-xl font-black uppercase tracking-tight mb-6 flex items-center gap-3">
+                        <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-xs">1</span>
+                        Pilih Layanan AC
+                    </h2>
+                    <div id="service-list" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div onclick="toggleService(this, 75000, 'Cuci AC')" class="service-card border-2 border-gray-100 p-5 rounded-2xl cursor-pointer transition-all hover:border-blue-300 relative overflow-hidden group">
+                            <h3 class="font-bold text-sm uppercase tracking-wide">Cuci AC Standard</h3>
+                            <p class="text-blue-600 font-black mt-1">Rp 75.000</p>
+                            <i class="fas fa-check-circle absolute -right-10 group-[.active]:right-4 top-1/2 -translate-y-1/2 text-blue-600 text-xl transition-all"></i>
+                        </div>
+                        <div onclick="toggleService(this, 150000, 'Isi Freon')" class="service-card border-2 border-gray-100 p-5 rounded-2xl cursor-pointer transition-all hover:border-blue-300 relative overflow-hidden group">
+                            <h3 class="font-bold text-sm uppercase tracking-wide">Isi/Tambah Freon</h3>
+                            <p class="text-blue-600 font-black mt-1">Rp 150.000</p>
+                            <i class="fas fa-check-circle absolute -right-10 group-[.active]:right-4 top-1/2 -translate-y-1/2 text-blue-600 text-xl transition-all"></i>
+                        </div>
+                        <div onclick="toggleService(this, 250000, 'Pasang AC')" class="service-card border-2 border-gray-100 p-5 rounded-2xl cursor-pointer transition-all hover:border-blue-300 relative overflow-hidden group">
+                            <h3 class="font-bold text-sm uppercase tracking-wide">Pasang AC Baru</h3>
+                            <p class="text-blue-600 font-black mt-1">Rp 250.000</p>
+                            <i class="fas fa-check-circle absolute -right-10 group-[.active]:right-4 top-1/2 -translate-y-1/2 text-blue-600 text-xl transition-all"></i>
+                        </div>
+                        <div onclick="toggleService(this, 150000, 'Bongkar AC')" class="service-card border-2 border-gray-100 p-5 rounded-2xl cursor-pointer transition-all hover:border-blue-300 relative overflow-hidden group">
+                            <h3 class="font-bold text-sm uppercase tracking-wide">Bongkar AC</h3>
+                            <p class="text-blue-600 font-black mt-1">Rp 150.000</p>
+                            <i class="fas fa-check-circle absolute -right-10 group-[.active]:right-4 top-1/2 -translate-y-1/2 text-blue-600 text-xl transition-all"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-[2.5rem] shadow-sm border border-gray-100">
+                    <h2 class="text-xl font-black uppercase tracking-tight mb-2 flex items-center gap-3">
+                        <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-xs">2</span>
+                        Lokasi Pengerjaan
+                    </h2>
+                    <p class="text-[10px] text-gray-400 mb-6 font-bold uppercase tracking-[0.2em]">Geser pin biru pada peta untuk lokasi presisi</p>
+                    
+                    <button onclick="getLocation()" id="btn-location" class="w-full bg-gray-900 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition-all flex items-center justify-center gap-3 shadow-lg uppercase text-xs tracking-widest">
+                        <i class="fas fa-location-arrow"></i> Deteksi Lokasi Otomatis
+                    </button>
+
+                    <div id="map" class="hidden"></div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-1">
+                <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl border border-blue-50 sticky top-28">
+                    <h2 class="text-lg font-black uppercase tracking-tight mb-6 text-gray-800">Ringkasan Biaya</h2>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex justify-between text-xs">
+                            <span class="text-gray-400 font-bold uppercase tracking-widest">Total Jasa:</span>
+                            <span id="res-jasa" class="font-black">Rp 0</span>
+                        </div>
+                        <div class="flex justify-between text-xs">
+                            <span class="text-gray-400 font-bold uppercase tracking-widest text-wrap">Akomodasi (<span id="res-km" class="text-blue-600">0</span> Km):</span>
+                            <span id="res-transport" class="font-black text-orange-600">Rp 0</span>
+                        </div>
+                        <div class="pt-4 border-t border-dashed border-gray-200">
+                            <div class="flex justify-between items-center">
+                                <span class="text-xs font-black uppercase">Grand Total:</span>
+                                <span id="res-total" class="text-3xl font-black text-blue-700 tracking-tighter">Rp 0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a id="wa-link" href="#" class="block w-full bg-green-500 text-white text-center font-bold py-5 rounded-2xl shadow-xl hover:bg-green-600 transition-all uppercase text-xs tracking-[0.1em]">
+                        <i class="fab fa-whatsapp text-xl mr-2"></i> Kirim Pesanan Sekarang
+                    </a>
+                    
+                    <p class="text-[9px] text-gray-400 mt-6 text-center italic leading-relaxed uppercase font-bold">
+                        *Biaya transportasi dihitung Rp 10.000 / Km untuk jarak di atas 8 Km dari Sukowidi.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="main-footer" class="bg-gray-900 text-white pt-16 pb-8"></footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="assets/js/loader.js"></script>
+
+    <script>
+        let selectedServices = [];
+        let totalJasa = 0;
+        let totalTransport = 0;
+        let currentJarak = 0;
+        let map, userMarker;
+        
+        // Titik Koordinat Nanda Teknik (Sukowidi Indah Residence)
+        const KANTOR = [-8.188734, 114.382833]; 
+
+        // Fungsi Pilih Jasa
+        function toggleService(el, harga, nama) {
+            el.classList.toggle('active');
+            if(el.classList.contains('active')) {
+                selectedServices.push(nama);
+                totalJasa += harga;
+            } else {
+                selectedServices = selectedServices.filter(s => s !== nama);
+                totalJasa -= harga;
+            }
+            updateTotal();
+        }
+
+        // Fungsi Ambil Lokasi GPS
+        function getLocation() {
+            const btn = document.getElementById('btn-location');
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mencari Koordinat...';
+            
+            navigator.geolocation.getCurrentPosition((pos) => {
+                const userLoc = [pos.coords.latitude, pos.coords.longitude];
+                initMap(userLoc);
+                btn.innerHTML = '<i class="fas fa-check-circle text-green-400"></i> LOKASI BERHASIL DITETAPKAN';
+            }, () => {
+                alert("GPS tidak aktif. Menggunakan lokasi pusat Banyuwangi (Silahkan geser pin manual).");
+                initMap([-8.2192, 114.3691]); // Koordinat Banyuwangi Kota
+                btn.innerHTML = '<i class="fas fa-map-marker-alt"></i> GESER PIN SECARA MANUAL';
+            });
+        }
+
+        // Inisialisasi Peta
+        function initMap(centerLoc) {
+            const mapContainer = document.getElementById('map');
+            mapContainer.classList.remove('hidden');
+
+            if (map) map.remove(); // Reset jika sudah ada
+
+            map = L.map('map').setView(centerLoc, 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+
+            // Marker Kantor
+            const kantorIcon = L.divIcon({
+                html: '<i class="fas fa-tools text-blue-700 text-3xl"></i>',
+                className: 'custom-div-icon',
+                iconSize: [30, 30], iconAnchor: [15, 30]
+            });
+            L.marker(KANTOR, {icon: kantorIcon}).addTo(map).bindPopup('<b>Nanda Teknik Office</b>').openPopup();
+
+            // Marker User (BISA DIGESER)
+            userMarker = L.marker(centerLoc, { draggable: true }).addTo(map)
+                .bindPopup('Geser pin ke lokasi tepat rumah Anda').openPopup();
+
+            // Hitung awal
+            calculateAndUpdate(centerLoc[0], centerLoc[1]);
+
+            // Event saat pin digeser
+            userMarker.on('dragend', function (e) {
+                const pos = e.target.getLatLng();
+                calculateAndUpdate(pos.lat, pos.lng);
+            });
+        }
+
+        function calculateAndUpdate(lat, lng) {
+            currentJarak = calculateDistance(KANTOR[0], KANTOR[1], lat, lng);
+            // Logika: Free 8km, selebihnya * 10rb
+            totalTransport = currentJarak > 8 ? Math.ceil(currentJarak - 8) * 10000 : 0;
+            updateTotal();
+        }
+
+        function calculateDistance(lat1, lon1, lat2, lon2) {
+            const R = 6371; // Radius Bumi
+            const dLat = (lat2-lat1) * Math.PI/180;
+            const dLon = (lon2-lon1) * Math.PI/180;
+            const a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) * Math.sin(dLon/2) * Math.sin(dLon/2);
+            return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        }
+
+        function updateTotal() {
+            const grandTotal = totalJasa + totalTransport;
+            document.getElementById('res-jasa').innerText = `Rp ${totalJasa.toLocaleString('id-ID')}`;
+            document.getElementById('res-km').innerText = currentJarak.toFixed(1);
+            document.getElementById('res-transport').innerText = `Rp ${totalTransport.toLocaleString('id-ID')}`;
+            document.getElementById('res-total').innerText = `Rp ${grandTotal.toLocaleString('id-ID')}`;
+            
+            const listJasa = selectedServices.length > 0 ? selectedServices.join(', ') : 'Belum memilih';
+            const pesanWA = `Halo Nanda Teknik,\n\nSaya mau order Jasa AC dari website:\n\n🛠 *Layanan:* ${listJasa}\n📍 *Jarak:* ${currentJarak.toFixed(1)} Km\n🚛 *Ongkir:* Rp ${totalTransport.toLocaleString('id-ID')}\n---------------------------\n💰 *Estimasi Total:* Rp ${grandTotal.toLocaleString('id-ID')}\n\nMohon bantuannya untuk dijadwalkan pengerjaan ke lokasi saya. Terima kasih!`;
+            
+            document.getElementById('wa-link').href = `https://wa.me/628123456789?text=${encodeURIComponent(pesanWA)}`;
+        }
+    </script>
+</body>
+</html>
