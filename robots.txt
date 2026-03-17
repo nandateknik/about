@@ -11,7 +11,7 @@ Disallow: /assets/js/
 Disallow: /node_modules/
 
 # Berikan petunjuk ke Sitemap (Ganti domain.com dengan domain aslimu nanti)
-Sitemap: https://nandateknik.com/sitemap.xml
+Sitemap:  .com/sitemap.xml
 
 # Cegah bot nakal atau bot yang menghabiskan resource server
 User-agent: DotBot

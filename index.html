@@ -13,17 +13,7 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <header class="sticky top-0 z-50 bg-white shadow-md transition-all duration-300">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-blue-700">NK <span class="text-gray-900 text-lg font-light">GROUP</span></div>
-            <div class="hidden md:flex space-x-8 font-medium">
-                <a href="#" class="hover:text-blue-600">Beranda</a>
-                <a href="#about" class="hover:text-blue-600">Tentang</a>
-                <a href="#business" class="hover:text-blue-600">Bisnis</a>
-                <a href="#news" class="hover:text-blue-600">Berita</a>
-            </div>
-            <a href="https://wa.me/your-number" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">Hubungi Kami</a>
-        </nav>
+    <header  id="main-header" class="sticky top-0 z-50 bg-white shadow-md transition-all duration-300">
     </header>
 
     <section class="hero-gradient h-[80vh] flex items-center">
@@ -36,6 +26,61 @@
             <div class="mt-10">
                 <a href="#business" class="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition mr-4">Lihat Layanan</a>
                 <a href="#about" class="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition">Siapa Saya?</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose-us" class="py-24 bg-[#0F172A] relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[300px] h-[300px] bg-blue-900/20 rounded-full blur-[120px] z-0"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="group relative p-10 rounded-[2.5rem] bg-slate-800/40 border border-slate-700/50 backdrop-blur-xl transition-all duration-500 hover:border-blue-400/50 hover:-translate-y-2">
+                    <div class="flex items-center gap-6 mb-6">
+                        <div class="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center text-2xl text-blue-400 border border-slate-700 shadow-inner group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h3 class="font-black text-[11px] uppercase tracking-[0.3em] text-white leading-relaxed">
+                            Expertise & <br>Experience
+                        </h3>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed pl-4 border-l-2 border-blue-500/30">
+                        Ditangani langsung oleh tenaga ahli bersertifikasi dengan pengalaman menangani berbagai instansi besar dan sistem kompleks.
+                    </p>
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-blue-500 group-hover:w-1/3 transition-all duration-500 rounded-full"></div>
+                </div>
+
+                <div class="group relative p-10 rounded-[2.5rem] bg-slate-800/40 border border-slate-700/50 backdrop-blur-xl transition-all duration-500 hover:border-blue-400/50 hover:-translate-y-2">
+                    <div class="flex items-center gap-6 mb-6">
+                        <div class="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center text-2xl text-blue-400 border border-slate-700 shadow-inner group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="font-black text-[11px] uppercase tracking-[0.3em] text-white leading-relaxed">
+                            Premium <br>Quality Standard
+                        </h3>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed pl-4 border-l-2 border-blue-500/30">
+                        Hanya menggunakan perangkat hardware orisinal dan standar operasional yang ketat untuk menjamin durabilitas jangka panjang.
+                    </p>
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-blue-500 group-hover:w-1/3 transition-all duration-500 rounded-full"></div>
+                </div>
+
+                <div class="group relative p-10 rounded-[2.5rem] bg-slate-800/40 border border-slate-700/50 backdrop-blur-xl transition-all duration-500 hover:border-blue-400/50 hover:-translate-y-2">
+                    <div class="flex items-center gap-6 mb-6">
+                        <div class="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center text-2xl text-blue-400 border border-slate-700 shadow-inner group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3 class="font-black text-[11px] uppercase tracking-[0.3em] text-white leading-relaxed">
+                            Integrated <br>Solutions
+                        </h3>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed pl-4 border-l-2 border-blue-500/30">
+                        Solusi satu pintu yang efisien—dari infrastruktur IT hingga kebutuhan gaya hidup—dikelola secara profesional dalam satu ekosistem.
+                    </p>
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-blue-500 group-hover:w-1/3 transition-all duration-500 rounded-full"></div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -113,30 +158,118 @@
     </div>
 </section>
 
-    <section id="business" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-12">Unit Bisnis Kami</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition border-t-4 border-blue-600">
-                    <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-tools"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Jasa Teknis</h3>
-                    <p class="text-gray-500">CCTV, Jaringan (MikroTik/Ruijie), Server, dan Maintenance AC.</p>
+<section class="py-24 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-black uppercase tracking-[0.3em] text-[10px]">What They Say</span>
+                <h2 class="text-4xl font-black uppercase tracking-tighter mt-4 text-gray-900">Ulasan <span class="text-blue-600">Klien & Mitra</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-10 rounded-[3rem] relative group hover:bg-white hover:shadow-2xl hover:shadow-blue-100 transition-all duration-500 border border-transparent hover:border-blue-100">
+                    <div class="flex text-yellow-400 mb-6 text-[10px] gap-1">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-8 font-medium">"Sangat puas dengan instalasi rak server dan CCTV-nya. Kerjanya rapi, teknisnya paham detail, dan yang terpenting *after-sales* nya sangat responsif."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-black shadow-lg">IT</div>
+                        <div>
+                            <h4 class="font-black text-[10px] uppercase tracking-widest text-gray-900">Staff IT Instansi</h4>
+                            <p class="text-[9px] text-gray-400 uppercase font-bold">Project Server & CCTV</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition border-t-4 border-blue-400">
-                    <div class="text-blue-400 text-4xl mb-4"><i class="fas fa-map-marked-alt"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Pariwisata</h3>
-                    <p class="text-gray-500">Paket Wisata Banyuwangi, Sewa Mobil, dan Perjalanan Lokal.</p>
+
+                <div class="bg-gray-50 p-10 rounded-[3rem] relative group hover:bg-white hover:shadow-2xl hover:shadow-blue-100 transition-all duration-500 border border-transparent hover:border-blue-100 md:-translate-y-4">
+                    <div class="flex text-yellow-400 mb-6 text-[10px] gap-1">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-8 font-medium">"Order paket wisata plus snack buat rombongan kantor. Semuanya terorganisir dengan baik. Camilannya enak-enak dan kemasannya sangat premium buat oleh-oleh."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-900 text-white flex items-center justify-center font-black shadow-lg">AM</div>
+                        <div>
+                            <h4 class="font-black text-[10px] uppercase tracking-widest text-gray-900">Ananda Mahendra</h4>
+                            <p class="text-[9px] text-gray-400 uppercase font-bold">Corporate Gathering</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition border-t-4 border-pink-400">
-                    <div class="text-pink-400 text-4xl mb-4"><i class="fas fa-award"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Florist</h3>
-                    <p class="text-gray-500">Papan Bunga, Buket Premium, dan Dekorasi Acara.</p>
+
+                <div class="bg-gray-50 p-10 rounded-[3rem] relative group hover:bg-white hover:shadow-2xl hover:shadow-blue-100 transition-all duration-500 border border-transparent hover:border-blue-100">
+                    <div class="flex text-yellow-400 mb-6 text-[10px] gap-1">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-8 font-medium">"Sistem CRM berbasis Google Sheets yang dibuat sangat membantu operasional toko kami. Sekarang input nota dan cek stok jadi otomatis dan jauh lebih cepat."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-gray-200 text-blue-700 flex items-center justify-center font-black shadow-lg">SB</div>
+                        <div>
+                            <h4 class="font-black text-[10px] uppercase tracking-widest text-gray-900">Suryo Bakti</h4>
+                            <p class="text-[9px] text-gray-400 uppercase font-bold">Business Automation Klien</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition border-t-4 border-orange-400">
-                    <div class="text-orange-400 text-4xl mb-4"><i class="fas fa-cookie-bite"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Snack & Camilan</h3>
-                    <p class="text-gray-500">Produk camilan khas dengan kemasan modern dan rasa otentik.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="business" class="py-24 bg-gray-50 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-black uppercase tracking-[0.3em] text-[10px]">Multi-Industry Ecosystem</span>
+                <h2 class="text-4xl font-black uppercase tracking-tighter mt-4 text-gray-900">Unit Bisnis <span class="text-blue-600">Terintegrasi</span></h2>
+                <div class="w-20 h-1.5 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-full">
+                
+                <div class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-[2.5rem] bg-slate-900 p-10 text-white shadow-2xl transition-all hover:shadow-blue-200/50 hover:-translate-y-2">
+                    <div class="relative z-10 flex flex-col h-full justify-between">
+                        <div>
+                            <div class="w-14 h-14 bg-blue-600/20 rounded-2xl flex items-center justify-center mb-8 border border-blue-500/30">
+                                <i class="fas fa-microchip text-2xl text-blue-400"></i>
+                            </div>
+                            <h3 class="text-3xl font-black uppercase tracking-tighter mb-4">Jasa Teknis <br> & IT Solution</h3>
+                            <p class="text-gray-400 text-sm max-w-xs font-medium leading-relaxed">Instalasi CCTV, Networking (MikroTik/Ruijie), Server Rack, hingga Otomasi Bisnis dengan Google Apps Script.</p>
+                        </div>
+                        <div class="mt-12 flex items-center gap-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white text-[10px] font-black uppercase tracking-widest px-6 py-3 rounded-xl transition-all">Lihat Portofolio</a>
+                        </div>
+                    </div>
+                    <i class="fas fa-server absolute bottom-[-30px] right-[-30px] text-[15rem] text-white/5 rotate-12"></i>
                 </div>
+
+                <div class="md:col-span-2 group relative overflow-hidden rounded-[2.5rem] bg-white p-8 shadow-sm border border-gray-100 transition-all hover:shadow-xl hover:-translate-y-1">
+                    <div class="flex flex-col md:flex-row items-center gap-8 relative z-10">
+                        <div class="w-20 h-20 rounded-[1.5rem] bg-blue-50 flex items-center justify-center text-blue-600 shrink-0 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-map-marked-alt text-3xl"></i>
+                        </div>
+                        <div class="text-left">
+                            <h3 class="font-black text-xl uppercase tracking-tighter text-gray-900">Mandiri Usaha Tour</h3>
+                            <p class="text-gray-500 text-xs mt-2 font-medium">Paket Wisata Premium Banyuwangi: Ijen, Baluran, & Pulau Merah.</p>
+                            <a href="#" class="inline-block mt-4 text-[10px] font-black text-blue-600 uppercase tracking-widest hover:gap-2">Explore Destination <i class="fas fa-chevron-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-[2.5rem] bg-white p-8 shadow-sm border border-gray-100 transition-all hover:shadow-xl hover:-translate-y-1">
+                    <div class="text-center relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-pink-50 flex items-center justify-center text-pink-500 mx-auto mb-6 group-hover:rotate-12 transition-transform">
+                            <i class="fas fa-award text-2xl"></i>
+                        </div>
+                        <h3 class="font-black text-xs uppercase tracking-widest text-gray-900">NK Florist</h3>
+                        <p class="text-gray-400 text-[10px] mt-2 font-bold uppercase">Buket & Karangan Bunga</p>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-[2.5rem] bg-white p-8 shadow-sm border border-gray-100 transition-all hover:shadow-xl hover:-translate-y-1">
+                    <div class="text-center relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-orange-50 flex items-center justify-center text-orange-500 mx-auto mb-6 group-hover:bounce-subtle transition-transform">
+                            <i class="fas fa-cookie-bite text-2xl"></i>
+                        </div>
+                        <h3 class="font-black text-xs uppercase tracking-widest text-gray-900">Mandiri Snack</h3>
+                        <p class="text-gray-400 text-[10px] mt-2 font-bold uppercase">Oleh-oleh Premium</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -206,40 +339,9 @@
     <script src="https://www.nandateknik.com/feeds/posts/default?alt=json-in-script&callback=panggilBerita&max-results=3"></script>
 </section>
 
-    <footer class="bg-gray-900 text-white pt-16 pb-8">
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-gray-800 pb-12">
-            <div>
-                <h3 class="text-xl font-bold mb-4">Kontak Kami</h3>
-                <p class="text-gray-400 mb-4">
-                    Sukowidi Indah Residence, Banyuwangi<br>
-                    Jawa Timur, Indonesia
-                </p>
-                <div class="flex space-x-4">
-                    <a href="#" class="hover:text-blue-500 text-xl"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="hover:text-blue-500 text-xl"><i class="fab fa-tiktok"></i></a>
-                    <a href="#" class="hover:text-blue-500 text-xl"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4">Link Cepat</h3>
-                <ul class="text-gray-400 space-y-2">
-                    <li><a href="#" class="hover:text-white">Layanan Jasa Teknis</a></li>
-                    <li><a href="#" class="hover:text-white">Paket Wisata</a></li>
-                    <li><a href="#" class="hover:text-white">Pesan Karangan Bunga</a></li>
-                    <li><a href="#" class="hover:text-white">Katalog Camilan</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4">Lokasi Kami</h3>
-                <div class="rounded-lg overflow-hidden h-40 bg-gray-700">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.868019333902!2d114.3725!3d-8.196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTEnNDUuNiJTIDExNMKwMjInMjEuMCJF!5e0!3m2!1sid!2sid!4v1640000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </div>
-        <div class="text-center pt-8 text-gray-500 text-sm">
-            &copy; 2026 Nanda Krisbianto. All Rights Reserved.
-        </div>
-    </footer>
+    <footer  id="main-footer" class="bg-gray-900 text-white pt-16 pb-8">
 
+    </footer>
+<script src="assets/js/loader.js"></script>
 </body>
 </html>
