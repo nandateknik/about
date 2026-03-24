@@ -1,44 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://www.nandakrisbianto.com/index.html</loc>
-      <lastmod>2026-03-17</lastmod>
+      <loc>https://www.nandakrisbianto.com/</loc>
+      <lastmod>2026-3-24</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>
 
    <url>
-      <loc>https://www.nandakrisbianto.com/servis-ac-banyuwangi.html</loc>
-      <lastmod>2026-03-17</lastmod>
+      <loc>https://www.nandakrisbianto.com/kontak-kami.html</loc>
+      <lastmod>2026-3-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.9</priority>
    </url>
 
    <url>
-      <loc>https://www.nandakrisbianto.com/estimasi-ac-banyuwangi.html</loc>
-      <lastmod>2026-03-17</lastmod>
+      <loc>https://www.nandakrisbianto.com/layanan-camilan.html</loc>
+      <lastmod>2026-3-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
 
    <url>
-      <loc>https://www.nandakrisbianto.com/cuci-ac-banyuwangi.html</loc>
-      <lastmod>2026-03-17</lastmod>
+      <loc>https://www.nandakrisbianto.com/layanan-florist.html</loc>
+      <lastmod>2026-3-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
 
    <url>
-      <loc>https://www.nandakrisbianto.com/pasang-ac-banyuwangi.html</loc>
-      <lastmod>2026-03-17</lastmod>
+      <loc>https://www.nandakrisbianto.com/layanan-pariwisata.html</loc>
+      <lastmod>2026-3-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
    </url>
 
    <url>
-      <loc>https://www.nandakrisbianto.com/bongkar-ac-banyuwangi.html</loc>
-      <lastmod>2026-03-17</lastmod>
+      <loc>https://www.nandakrisbianto.com/layanan-teknis.html</loc>
+      <lastmod>2026-3-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
    </url>
+
+   <url>
+      <loc>https://www.nandakrisbianto.com/profile.html</loc>
+      <lastmod>2026-3-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+
+   <url>
+      <loc>https://www.nandakrisbianto.com/ac/</loc>
+      <lastmod>2026-3-24</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>https://www.nandakrisbianto.com/ac/bongkar-ac-banyuwangi.html</loc>
+      <lastmod>2026-3-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.9</priority>
+   </url>
+
+   <url>
+      <loc>https://www.nandakrisbianto.com/ac/cuci-ac-banyuwangihtml</loc>
+      <lastmod>2026-3-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.9</priority>
+   </url>
+
+   <url>
+      <loc>https://www.nandakrisbianto.com/ac/estimasi-ac-banyuwangi.html</loc>
+      <lastmod>2026-3-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://www.nandakrisbianto.com/ac/pasang-ac-banyuwangi.html</loc>
+      <lastmod>2026-3-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.9</priority>
+   </url>
+
+   <url>
+      <loc>https://www.nandakrisbianto.com/ac/servis-ac-banyuwangi.html</loc>
+      <lastmod>2026-3-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.9</priority>
+   </url>
+
+   <url>
+      <loc>https://www.nandakrisbianto.com/ac/teknisi-ac-banyuwangi.html</loc>
+      <lastmod>2026-3-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.9</priority>
+   </url>
+
+   <url>
+      <loc>https://www.nandakrisbianto.com/cctv/bali</loc>
+      <lastmod>2026-3-24</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>https://www.nandakrisbianto.com/cctv/banyuwangi</loc>
+      <lastmod>2026-3-24</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
 </urlset>

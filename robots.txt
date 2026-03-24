@@ -1,21 +1,21 @@
-# https://www.robotstxt.org/robotstxt.html
-# Dioptimalkan untuk Nanda Teknik - Spesialis AC Banyuwangi
-
+# Robots.txt untuk nandakrisbianto.com
 User-agent: *
 Allow: /
 
-# Jangan biarkan Google mengindeks folder komponen mentah
-Disallow: /components/
+# Jangan indeks folder aset agar tidak muncul di hasil pencarian gambar/file teknis
 Disallow: /assets/css/
 Disallow: /assets/js/
-Disallow: /node_modules/
+Disallow: /site.webmanifest
+Disallow: /apple-touch-icon.png
+Disallow: /favicon.ico
+Disallow: /components/
+Disallow: /ac/assets/css/
+Disallow: /ac/assets/js/
+Disallow: /ac/components/
 
-# Berikan petunjuk ke Sitemap (Ganti domain.com dengan domain aslimu nanti)
-Sitemap:  .com/sitemap.xml
+# Arahkan Google ke sitemap Anda
+Sitemap: https://www.nandakrisbianto.com/sitemap.xml
 
-# Cegah bot nakal atau bot yang menghabiskan resource server
-User-agent: DotBot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
+# Optimasi khusus untuk bot iklan (opsional)
+User-agent: Mediapartners-Google
+Allow: /
